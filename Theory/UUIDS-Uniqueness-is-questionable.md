@@ -23,3 +23,14 @@ $
 
 > [!NOTE]
 > Уникальность исследования плохо подтверждается, будем считать эту статью - компиляцией накопленного опыта без претензий на оригинальность.
+
+Упростим
+$\frac{n!}{(n-x)! \cdot n^x} \ge P$
+
+С помощью формулы Стирлинга: $n{!}={\sqrt{2 \cdot \pi \cdot n} \cdot n^n \cdot e^{-n}}$
+
+$\frac {\sqrt{2 \cdot \pi \cdot n} \cdot n^n \cdot e^{-n}} {\sqrt{2 \cdot \pi \cdot (n-x)} \cdot (n-x)^{n-x} \cdot e^{x-n} \cdot n^x} \ge P$
+
+Получаем
+
+$\left(\frac{n}{n-x} \right)^{n+\frac{1}{2}-x} \cdot e^{-x} \ge P$
