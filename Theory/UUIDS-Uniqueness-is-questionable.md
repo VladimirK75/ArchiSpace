@@ -10,7 +10,7 @@ UUID (поколения 4) - это псевдослучайное 32-байт�
 $
 \forall n , P (n \in \mathbb{N}, P \in \mathbb{Q}):
 \exists x , x \in \mathbb{N}, x \le n \implies    
-\frac{n!}{(n-x)! \cdot n^x} \ge P)
+\frac{n!}{(n-x)! \cdot n^x} \ge P
 $
 ```
 
