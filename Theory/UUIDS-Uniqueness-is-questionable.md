@@ -1,6 +1,7 @@
 # Оглавление
 1. [Суть коллизии](#FirstBullit)
 2. [Частный случай коллизии](#SecondBullit)
+3. [Решаем в общем виде](#Solution)
 
 ## Суть коллизии <a name="FirstBullit"></a>
 UUID (поколения 4) - это псевдослучайное 32-байтное слово, в котором 6 бит отведены на хозяйственные расходы.
@@ -24,6 +25,8 @@ $
 > [!NOTE]
 > Уникальность исследования плохо подтверждается, будем считать эту статью - компиляцией накопленного опыта без претензий на оригинальность.
 
+
+## Решаем в общем виде<a name="Solution"></a>
 Упростим
 $\frac{n!}{(n-x)! \cdot n^x} \ge P$
 
@@ -33,4 +36,12 @@ $\frac {\sqrt{2 \cdot \pi \cdot n} \cdot n^n \cdot e^{-n}} {\sqrt{2 \cdot \pi \c
 
 Получаем
 
-$\left(\frac{n}{n-x} \right)^{n+\frac{1}{2}-x} \cdot e^{-x} \ge P$
+$\sqrt{\frac {n}{n-x}} \cdot \left(\frac{n}{n-x} \right)^{n-x} \cdot e^{-x} \ge P$
+
+Или, чтоб было больше похоже на "второй замечательный предел"
+
+$\sqrt{\frac {n}{n-x}} \cdot \frac {\left(1-\frac{x}{n} \right)^{x} }{\left(1-\frac{x}{n} \right)^{n}} \cdot e^{-x} \ge P$
+
+$\sqrt{\frac {n}{n-x}} \cdot \frac {\left(1-\frac{x}{n} \right)^{x} }{e^{-x}} \cdot e^{-x} \ge P$
+
+$\sqrt{\frac {n}{n-x}} \cdot  {\left(1-\frac{x}{n} \right)^{x} } \ge P$
